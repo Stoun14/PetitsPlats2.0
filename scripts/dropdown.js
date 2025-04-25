@@ -1,7 +1,9 @@
 function dropdown() {
+    console.log("test");
+    
     document.getElementById('searchInput').addEventListener('keyup', function() {
-        var input = this.value.toLowerCase();
-        var items = document.querySelectorAll('.dropdown-item');
+        let input = this.value.toLowerCase();
+        let items = document.querySelectorAll('.dropdown-item');
 
         items.forEach(function(item) {
             var text = item.textContent.toLowerCase();
@@ -9,8 +11,8 @@ function dropdown() {
         });
     });
 
-    // Gérer la sélection d'un élément dans le menu déroulant
     document.querySelectorAll('.dropdown-item').forEach(function(item) {
+        item.style.display = 'block';
         item.addEventListener('click', function() {
             document.getElementById('dropdownMenuButton').textContent = this.textContent;
         });

@@ -33,19 +33,18 @@
     <div class="main">
         <div class="selectContainer d-flex justify-content-start align-items-center">            
             <div class="dropdown mt-2">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" onclick="dropdown()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Sélectionner un fruit
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenu">
                     <div class="input-group">
-                        <input type="text" class="form-control" id="searchInput" placeholder="" onkeyup="">
+                        <input type="text" class="form-control" id="searchInput" placeholder="" onkeyup="dropdown()">
                     </div>
                     <a class="dropdown-item" href="#" data-value="cerise">Cerise</a>
                     <a class="dropdown-item" href="#" data-value="banane">Banane</a>
                     <a class="dropdown-item" href="#" data-value="pomme">Pomme</a>
                     <a class="dropdown-item" href="#" data-value="raisin">Raisin</a>
                     <a class="dropdown-item" href="#" data-value="melon">Melon</a>
-                    <!-- Ajoutez d'autres options ici -->
                 </div>
             </div>
             <div class="selectIngredients col-2" aria-label="selectIngredients">
