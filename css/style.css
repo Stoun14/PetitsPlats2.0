@@ -1,0 +1,64 @@
+/**************/
+/**  header  **/
+/**************/
+
+header{
+    height: 68vh;
+}
+
+.banner {
+    background-image: url(/assets/images/bg-header.jpg) ;
+    background-position: center;
+    background-size: cover;    
+}
+
+.logo {
+    top: 5%;
+    left: 5%;
+}
+
+.searchTitle {
+    font-family: "Anton", sans-serif;
+    font-size: 44px;
+    color: #FFD15B;
+}
+
+.searchBar {
+    height: 72px;
+    width: 904px;
+    font-size: 16px;
+}
+
+.searchBtn {
+    position: relative;
+    width: 51px;
+    height: 52px;
+    top: 10px;
+    left: -59px;
+}
+
+.round {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+}
+
+.line {
+    transform: rotate(-45deg);
+}
+
+/************/
+/**  main  **/
+/************/
+
+.selectContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;    
+}
+
+.ingredients, .appliance, .utensils {
+    height: 56px;
+    border-radius: 11px;
+}
