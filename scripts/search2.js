@@ -2,11 +2,9 @@ const searchInput = document.getElementById('searchBar');
 
 searchInput.addEventListener('input', function(event) {
     const searchTerm = searchInput.value;
-    if (searchTerm.length >= 3) {
-        tri(searchTerm);
+    while (searchTerm.length >= 3) {
+        tri(searchTerm);    
     }
-
-    searchTag(recipes);
 })
 
 function tri(inputTerm) {
@@ -39,8 +37,6 @@ function tri(inputTerm) {
         li.textContent = item;
         recipesList.appendChild(li);
     });
-
-    searchTag(result);
 }
 
 function validInput(event) {

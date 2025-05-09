@@ -32,9 +32,9 @@
     </header>
     <div class="main">
         <div class="selectContainer d-flex justify-content-start align-items-center">            
-            <div class="dropdown mt-2">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" onclick="dropdown()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Sélectionner un fruit
+            <div class="ingredientsDropdown">
+                <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" onclick="dropdown()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Ingredients
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenu">
                     <div class="input-group">
@@ -45,24 +45,62 @@
                     <a class="dropdown-item" href="#" data-value="pomme">Pomme</a>
                     <a class="dropdown-item" href="#" data-value="raisin">Raisin</a>
                     <a class="dropdown-item" href="#" data-value="melon">Melon</a>
+                </div> -->
+                <div class="input-group">
+                    <input type="text" class="form-control" id="searchIngredients" placeholder="">
+                </div>
+                <div class="ingredients">
+                    <ul id="ingredientsList"></ul>
                 </div>
             </div>
-            <div class="selectIngredients col-2" aria-label="selectIngredients">
-                <input type="text" id="searchIngredients" placeholder="Ingredients" onkeyup="dropdown()">
-                <ul id="optionsList">
-                    <li></li>
-                </ul>
+            <div class="applianceDropdown" aria-label="applianceDropdown">
+                <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" onclick="dropdown()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Appareils
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenu">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="searchInput" placeholder="" onkeyup="dropdown()">
+                    </div>
+                    <a class="dropdown-item" href="#" data-value="cerise">Cerise</a>
+                    <a class="dropdown-item" href="#" data-value="banane">Banane</a>
+                    <a class="dropdown-item" href="#" data-value="pomme">Pomme</a>
+                    <a class="dropdown-item" href="#" data-value="raisin">Raisin</a>
+                    <a class="dropdown-item" href="#" data-value="melon">Melon</a>
+                </div> -->
+                <div class="input-group">
+                    <input type="text" class="form-control" id="searchAppliance" placeholder="">
+                </div>
+                <div class="appliances">
+                    <ul id="appliancesList"></ul>    
+                </div>
             </div>
-            <select name="selectAppliance" id="selectAppliance" class="appliance col-2" aria-label="selectIngredients">
-                <option>Appareils</option>
-            </select>
-            <select name="selectUtensils" id="selectUtensils" class="utensils col-2" aria-label="selectIngredients">
-                <option>Ustensiles</option>
-            </select>
+            <div class="utensilsDropdown" aria-label="utensilsDropdown">
+                <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" onclick="dropdown()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Ustensiles
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenu">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="searchInput" placeholder="" onkeyup="dropdown()">
+                    </div>
+                    <a class="dropdown-item" href="#" data-value="cerise">Cerise</a>
+                    <a class="dropdown-item" href="#" data-value="banane">Banane</a>
+                    <a class="dropdown-item" href="#" data-value="pomme">Pomme</a>
+                    <a class="dropdown-item" href="#" data-value="raisin">Raisin</a>
+                    <a class="dropdown-item" href="#" data-value="melon">Melon</a>
+                </div> -->
+                <div class="input-group">
+                    <input type="text" class="form-control" id="searchUtensils" placeholder="">
+                </div>
+                <div class="utensils">
+                    <ul id="utensilsList"></ul>    
+                </div>
+            </div>
             <h3 class="recipesCounter"></h3>
         </div>
-        <div class="labelSearch"></div>
-        <div class="cardsGrid">
+        <div class="recipes">
+            <ul id="recipesList"></ul>
+        </div>
+        <!-- <div class="cardsGrid">
             <div class="recipeCard">
                 <img src="" class="recipeImg card-img-top" alt="">
                 <div class="recipeCardBody card-body">
@@ -75,10 +113,11 @@
                   </ul>
                 </div>                
               </div>
-        </div>
+        </div> -->
     </div>
     <!-- Chargement des scripts -->
     <script src="scripts/recipes.js"></script>
+    <script src="scripts/search.js"></script>
     <script src="scripts/dropdown.js"></script>
 </body>
 </html>
