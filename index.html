@@ -17,8 +17,8 @@
             <div class="container-fluid h-100 d-flex flex-column justify-content-center">            
                 <h2 class="searchTitle mx-auto">cherchez parmi plus de 1500 recettes<br>
                     du quotidien, simples et délicieuses</h2>                
-                <form action="" class="d-flex mx-auto justify-content-center">
-                    <input type="text" id="searchBar" name="searchBar" class="d-flex searchBar p-2" placeholder="Rechercher une recette, un ingrédient, ...">
+                <form action="" class="d-flex mx-auto justify-content-center" onsubmit="event.preventDefault();">
+                    <input type="text" id="searchBar" name="searchBar" class="d-flex searchBar p-2" placeholder="Rechercher une recette, un ingrédient, ..." onkeyup="validInput(event)">
                     <button type="submit" class="searchBtn btn btn-dark">
                         <div class="mglass">
                             <div class="round"></div>
@@ -31,69 +31,42 @@
                 
     </header>
     <div class="main">
-        <div class="selectContainer d-flex justify-content-start align-items-center">            
-            <div class="ingredientsDropdown">
-                <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" onclick="dropdown()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Ingredients
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenu">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="searchInput" placeholder="" onkeyup="dropdown()">
-                    </div>
-                    <a class="dropdown-item" href="#" data-value="cerise">Cerise</a>
-                    <a class="dropdown-item" href="#" data-value="banane">Banane</a>
-                    <a class="dropdown-item" href="#" data-value="pomme">Pomme</a>
-                    <a class="dropdown-item" href="#" data-value="raisin">Raisin</a>
-                    <a class="dropdown-item" href="#" data-value="melon">Melon</a>
-                </div> -->
+        <div class="selectContainer d-flex justify-content-center">            
+            <div class="ingredientsContainer container mt-3">
                 <div class="input-group">
                     <input type="text" class="form-control" id="searchIngredients" placeholder="">
                 </div>
-                <div class="ingredients">
-                    <ul id="ingredientsList"></ul>
-                </div>
+                <select id="ingredientsSelect" class="form-control">
+                    <!-- <option value="">ingrédients</option> -->
+                </select>
+            
+                <ul class="list-group mt-3" id="ingredientsList">
+                    
+                </ul>
             </div>
-            <div class="applianceDropdown" aria-label="applianceDropdown">
-                <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" onclick="dropdown()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Appareils
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenu">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="searchInput" placeholder="" onkeyup="dropdown()">
-                    </div>
-                    <a class="dropdown-item" href="#" data-value="cerise">Cerise</a>
-                    <a class="dropdown-item" href="#" data-value="banane">Banane</a>
-                    <a class="dropdown-item" href="#" data-value="pomme">Pomme</a>
-                    <a class="dropdown-item" href="#" data-value="raisin">Raisin</a>
-                    <a class="dropdown-item" href="#" data-value="melon">Melon</a>
-                </div> -->
+            <div class="applianceContainer container mt-3">
                 <div class="input-group">
                     <input type="text" class="form-control" id="searchAppliance" placeholder="">
                 </div>
-                <div class="appliances">
-                    <ul id="appliancesList"></ul>    
-                </div>
+                <select id="applianceSelect" class="form-control">
+                    <!-- <option value="">Appareils</option> -->
+                </select>
+            
+                <ul class="list-group mt-3" id="applianceList">
+                    
+                </ul>
             </div>
-            <div class="utensilsDropdown" aria-label="utensilsDropdown">
-                <!-- <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" onclick="dropdown()" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Ustensiles
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenu">
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="searchInput" placeholder="" onkeyup="dropdown()">
-                    </div>
-                    <a class="dropdown-item" href="#" data-value="cerise">Cerise</a>
-                    <a class="dropdown-item" href="#" data-value="banane">Banane</a>
-                    <a class="dropdown-item" href="#" data-value="pomme">Pomme</a>
-                    <a class="dropdown-item" href="#" data-value="raisin">Raisin</a>
-                    <a class="dropdown-item" href="#" data-value="melon">Melon</a>
-                </div> -->
+            <div class="utensilsContainer container mt-3">
                 <div class="input-group">
                     <input type="text" class="form-control" id="searchUtensils" placeholder="">
                 </div>
-                <div class="utensils">
-                    <ul id="utensilsList"></ul>    
-                </div>
+                <select id="utensilsSelect" class="form-control">
+                    <!-- <option value="">Ustensiles</option> -->
+                </select>
+            
+                <ul class="list-group mt-3" id="utensilsList">
+                    
+                </ul>
             </div>
             <h3 class="recipesCounter"></h3>
         </div>
